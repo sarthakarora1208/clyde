@@ -51,10 +51,6 @@ AWS_SECRET_ACCESS_KEY="YOUR_SECRET_ACCESS_KEY"
 ### Expert.ai Account
 You need to add your Expert.ai credentials in the [.env](./.env) file.
 
-```bash
-EAI_USERNAME=sarthakarora1208@gmail.com
-EAI_PASSWORD=Passw@rd1
-```
 
 To run the flask app:-
 ```bash
