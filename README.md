@@ -81,9 +81,9 @@ IPTC traits, Emotional traits & Behavioral traits are shown as piecharts made us
 
 ### Python Backend
 
-To get the Python backend running locally follow the instructions at [clyde-python-backend/README.md](https://github.com/sarthakarora1208/clyde/main/clyde-python-backend/README.md)
+To get the Python backend running locally follow the instructions at [clyde-python-backend/README.md](./clyde-python-backend/README.md)
 
 ### Chrome Extension
 
-To get the Clyde Chrome Extension running locally follow the instructions at [clyde-chrome-extension/README.md](https://github.com/sarthakarora1208/clyde/main/clyde-chrome-extension/README.md)
+To get the Clyde Chrome Extension running locally follow the instructions at [clyde-chrome-extension/README.md](./clyde-chrome-extension/README.md)
 
