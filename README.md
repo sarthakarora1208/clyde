@@ -73,6 +73,9 @@ We built the chrome extension using HTML, CSS & Javascript. The charts have been
 
 
 ## How we built it
+
+We built the chrome extension using HTML, CSS & Javascript. The charts have been added using the chart.js library. The backend of the application is written in Python. The REST API is built using Flask. We use AWS texract to get a text from the screenshots using Optical Character Recognition. News articles are scrapped using Beautiful Soup & Regex. Youtube's transcript API is used to get the transcripts for the video. Once the text is extracted in anyone  of three ways, it now analyzed using the following Expert.ai's NLP APIs.
+
 <ol>
 	<li>Document Analysis</li>
 		<ul>
@@ -91,6 +94,7 @@ All the relevant key phrases & topics are extracted from the youtube subtitles o
 The key phrases are used to make Word Clouds. Word Cloud is a data visualization technique used for representing text data in which the size of each word indicates its frequency or importance. This gives the user an overview of what the author is trying to say.
 
 The IPTC traits, Emotional traits & Behavioral traits that we get from Expert.ai are shown as piecharts made using the chart.js library
+
 
 ## Basic Installation Instructions
 
