@@ -376,13 +376,14 @@ const getVideoInsights = async () => {
             updateCommonTopics(commonTopics);
         }
 
+        let translationLanguage = choosenSecondaryLanguage ? choosenSecondaryLanguage : "es";
         let translationResponse = await fetch(`${BASE_URL}/translate-response`,{
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ "translationLanguage": choosenSecondaryLanguage,
+            body: JSON.stringify({ "translationLanguage": translationLanguage,
             "responseObject": { "data" : data }})
         })
         let translationResponseData = await translationResponse.json();
