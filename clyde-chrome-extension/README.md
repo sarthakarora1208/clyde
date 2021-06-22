@@ -19,7 +19,7 @@ Follow the steps to load the unpacked extension.
 
     ![Enable Developer Mode](https://i.imgur.com/trkLAS0.png)
 
-3. Click on Load Unpacked and select your cloned folder.
+3. Click on Load Unpacked and select the 'clyde-chrome-extension' folder inside the cloned folder.
 
     ![Select the cloned folder by clicking on Load Unpacked](https://i.imgur.com/dQAiYcK.png)
 
