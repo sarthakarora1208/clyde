@@ -46,6 +46,7 @@ Clyde is a chrome extension that uses multiple NLP techniques to analyze sentime
 ## Table of Contents
 
 - [Introduction](#Introduction)
+- [Architecture Diagram](#Architecture-Diagram)
 - [Features](#Features)
   - [Opinion Mining & Web Content Analysis](#Opinion-Mining-&-Web-Content-Analysis)
   - [Youtube Video  & News Report Analysis](#Youtube-Video-&-News-Report-Analysis)
@@ -54,9 +55,11 @@ Clyde is a chrome extension that uses multiple NLP techniques to analyze sentime
   - [Python Backend](#Python-Backend)
   - [Chrome Extension](#Chrome-Extension)
 
+## Architecture Diagram
+![Clyde-Chrome-Extension-Architecture-Diagram](https://user-images.githubusercontent.com/42542489/122991400-990fd580-d3c2-11eb-9862-3451abab545d.png)
+
+
 ## Features
-
-
 ### Opinion Mining & Web Content Analysis
 
 Just select the text areas you want to monitor using the snipping tool & click the 'Analyze Images' button. You can take upto 8 screenshots across different websites to get a detailed analysis. You'll get the results back as piecharts & word clouds.
