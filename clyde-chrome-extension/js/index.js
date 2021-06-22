@@ -31,7 +31,7 @@ let options = {
 };
 
 const PRODUCTION = true;
-const BASE_URL = PRODUCTION ? 'http://heroesquiz.tech' : 'http://localhost:5000';
+const BASE_URL = PRODUCTION ? 'https://heroesquiz.tech' : 'http://localhost:5000';
 
 const captureButton = document.querySelector('#captureScreenshot');
 const insightsButton = document.querySelector('#pageInsights');
@@ -461,14 +461,14 @@ const getPageInsights = async () => {
         if (commonTopics.length > 0) {
             updateCommonTopics(commonTopics);
         }
-
+        let translationLanguage = choosenSecondaryLanguage ? choosenSecondaryLanguage : "es";
         let translationResponse = await fetch(`${BASE_URL}/translate-response`,{
             method: 'POST',
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ "translationLanguage": choosenSecondaryLanguage,
+            body: JSON.stringify({ "translationLanguage": translationLanguage,
             "responseObject": { "data" : data }})
         })
         let translationResponseData = await translationResponse.json();
