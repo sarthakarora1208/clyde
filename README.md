@@ -20,7 +20,9 @@
   </p>
 </p>
 
----
+  
+## Introduction
+
 
 Video Link: [https://youtu.be/EVARioLl__s](https://youtu.be/EVARioLl__s)
 
@@ -29,7 +31,7 @@ Clyde is a chrome extension that uses multiple NLP techniques to analyze sentime
 
 ## Table of Contents
 
-- [Clyde Chrome Extension](#Clyde-Chrome-Extension)
+- [Introduction](#Introduction)
 - [Features](#Features)
   - [Opinion Mining & Web Content Analysis](#Opinion-Mining-&-Web-Content-Analysis)
   - [Youtube Video  & News Report Analysis](#Youtube-Video-&-News-Report-Analysis)
@@ -41,16 +43,16 @@ Clyde is a chrome extension that uses multiple NLP techniques to analyze sentime
 ## Features
 
 
-#### Opinion Mining & Web Content Analysis
+### Opinion Mining & Web Content Analysis
 
 Just select the text areas you want to monitor using the snipping tool & click the 'Analyze Images' button. You can take upto 8 screenshots across different websites to get a detailed analysis. You'll get the results back as piecharts & word clouds.
 Using this feature you can tap into customer insights for your product to make better business. For example you can screenshot their product reviews to get a detailed analysis.
 
 
-#### Youtube Video  & News Report Analysis
+### Youtube Video  & News Report Analysis
 Did you know that the average youtube video length is about 11.7 minutes? And we all know news reports can be pretty long and monotonous. Your time is precious. How do you use it wisely? Clyde helps you manage your time well by summarising news articles & youtube videos. Tag-based interest matching assists users in filtering out content that doesn't match their preferences. Additionally, for news articles, all the IPTC media topics are listed for your convenience.
 
-#### Language Translation
+### Language Translation
 For bilingual speakers, you can get the summary & the word cloud in Spanish, French, German, or Italian upon clicking the toggle button on the top right.
 
 ## How we built it
