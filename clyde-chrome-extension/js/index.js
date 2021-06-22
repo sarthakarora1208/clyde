@@ -30,8 +30,8 @@ let options = {
     }
 };
 
-const PRODUCTION = false;
-const BASE_URL = PRODUCTION ? '' : 'http://localhost:5000';
+const PRODUCTION = true;
+const BASE_URL = PRODUCTION ? 'http://heroesquiz.tech' : 'http://localhost:5000';
 
 const captureButton = document.querySelector('#captureScreenshot');
 const insightsButton = document.querySelector('#pageInsights');
