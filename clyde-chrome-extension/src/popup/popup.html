@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css"
+            integrity="sha512-0SPWAwpC/17yYyZ/4HSllgaK7/gg9OlVozq8K7rf3J8LvCjYEEIfzzpnA2/SSjpGIunCSD18r3UhvDcu/xncWA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous"
+        />
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- styles -->
+        <link rel="stylesheet" href="../../css/styles.css" />
+        <title>Clyde</title>
+    </head>
+    <body>
+        <div id="popup">
+            <div class="popup-header">
+                <div>
+                    <img
+                        width="30px"
+                        height="30px"
+                        src="../../icons/icon128.png"
+                        alt="Clyde"
+                    />
+                    <p>Clyde</p>
+                </div>
+                <div id="langToggleWrapper">
+                    <!-- <span>English</span> -->
+                    <label class="switch">
+                        <input type="checkbox" class="lang-toggle" />
+                        <span class="slider"></span>
+                    </label>
+                    <!-- <span>French</span> -->
+                </div>
+            </div>
+            <div class="popup-interests">
+                <div class="lang-wrapper">
+                    <p>Select Secondary Language</p>
+                    <div class="lang-picker">
+                        <select class="lang-text" id="selectLang" required>
+                            <option value=""></option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="it">Italian</option>
+                        </select>
+                        <label class="lang-label">Select</label>
+                    </div>
+                </div>
+                <button id="saveInterests">
+                    Next
+                    <img
+                        src="../../icons/next.svg"
+                        width="12px"
+                        height="12px"
+                        class="btnIcon-r"
+                    />
+                </button>
+            </div>
+            <div class="popup-content">
+                <ul class="screenshot-list"></ul>
+                <p class="main-text">
+                   Select a way to get insights
+                </p>
+
+                <div class="button-container">
+                    <button id="captureScreenshot" class="full-width">
+                        <img src="../../icons/screenshot.svg" class="btnIcon" />
+                        Capture Screenshot
+                    </button>
+
+                    <button id="pageInsights" class="full-width button-outline">
+                        <img
+                            src="../../icons/magnifying-glass.svg"
+                            width="16px"
+                            height="16px"
+                            class="btnIcon"
+                        />
+                        Get Page Insights
+                    </button>
+                </div>
+
+                <button id="addImage" class="full-width" style="display: none">
+                    <img
+                        src="../../icons/plus-sign.svg"
+                        width="12px"
+                        height="12px"
+                        class="btnIcon"
+                    />
+                    Add Screenshot
+                </button>
+                <button id="check" class="full-width" style="display: none">
+                    <img
+                        src="../../icons/magnifying-glass.svg"
+                        width="16px"
+                        height="16px"
+                        class="btnIcon"
+                    />
+                    Analyse Screenshot
+                </button>
+            </div>
+            <img src="../../icons/Ripple-1s.svg" class="loader" />
+
+            <!-- Result -->
+
+            <div class="popup-result">
+                <img src="" width="600px" height="360px" class="wordcloud" />
+
+                <!-- Tag Interests -->
+
+                    <div id="tagInterests">
+                    </div>
+                <!-- summary -->
+                <div id="summary-box">
+
+                </div>
+                <p id="summary"></p>
+                <label id="readMore">Read More</label>
+                <hr style="height:2px; color:white">
+
+                <!-- charts -->
+                <!-- sentimental wrapper -->
+
+                <div id="analysis">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link active button-link"
+                                id="home-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#sentimental"
+                                type="button"
+                                role="tab"
+                                aria-controls="home"
+                                aria-selected="true"
+                            >
+                                Sentiment Analysis
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link button-link"
+                                id="profile-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#emotion"
+                                type="button"
+                                role="tab"
+                                aria-controls="profile"
+                                aria-selected="false"
+                            >
+                                Emotional Analysis
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link button-link"
+                                id="contact-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#behavior"
+                                type="button"
+                                role="tab"
+                                aria-controls="contact"
+                                aria-selected="false"
+                            >
+                                Behavioral Analysis
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link button-link"
+                                id="contact-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#iptc"
+                                type="button"
+                                role="tab"
+                                aria-controls="contact"
+                                aria-selected="false"
+                            >
+                                IPTC
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div
+                            class="tab-pane fade show active"
+                            id="sentimental"
+                            role="tabpanel"
+                            aria-labelledby="home-tab"
+                        >
+                            <div class="chart-wrapper">
+                                <canvas id="sentimentAnalysisChart"></canvas>
+                            </div>
+                        </div>
+                        <div
+                            class="tab-pane fade"
+                            id="emotion"
+                            role="tabpanel"
+                            aria-labelledby="profile-tab"
+                        >
+                            <div class="chart-wrapper">
+                                <canvas id="emotionalAnalysisChart"></canvas>
+                            </div>
+                        </div>
+                        <div
+                            class="tab-pane fade"
+                            id="behavior"
+                            role="tabpanel"
+                            aria-labelledby="contact-tab"
+                        >
+                            <div class="chart-wrapper">
+                                <canvas id="behavioralAnalysisChart"></canvas>
+                            </div>
+                        </div>
+                        <div
+                            class="tab-pane fade"
+                            id="iptc"
+                            role="tabpanel"
+                            aria-labelledby="contact-tab"
+                        >
+                            <div class="chart-wrapper">
+                                <canvas id="IPTCAnalysisChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <p>hello</p> -->
+
+                <button class="button-link" id="startAgain">Start Again</button>
+            </div>
+        </div>
+
+        <!--CropperJS -->
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"
+            integrity="sha512-ooSWpxJsiXe6t4+PPjCgYmVfr1NS5QXJACcR/FPpsdm6kqG1FmQ2SVyg2RXeVuCRBLr0lWHnWJP6Zs1Efvxzww=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <!-- Chart js -->
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- scripts -->
+        <script type="module" src="../../js/index.js"></script>
+    </body>
+</html>

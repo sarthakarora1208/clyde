@@ -1,0 +1,30 @@
+{
+    "name": "Clyde",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "insert description here",
+    "homepage_url": "http://example.com",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icons/icon19.png",
+        "default_title": "Clyde",
+        "default_popup": "src/popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/*", "https://youtube.com/*"],
+            "js": ["js/content.js"]
+        }
+    ],
+
+    "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com  https://cdn.jsdelivr.net;  object-src 'self'",
+    "permissions": ["activeTab", "storage", "unlimitedStorage"]
+}
